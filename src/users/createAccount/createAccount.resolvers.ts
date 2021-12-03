@@ -1,5 +1,5 @@
-import client from '../client'
-import { ICreateAccountInput } from '../type'
+import client from '../../client'
+import { ICreateAccountInput } from '../../type'
 import bcrypt from 'bcrypt'
 
 export default {
@@ -39,8 +39,8 @@ export default {
           },
         })
         return { ok: true }
-      } catch (e) {
-        return { ok: false, error: e }
+      } catch (error) {
+        return { ok: false, error }
       }
     },
   },
