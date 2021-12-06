@@ -11,7 +11,6 @@ export default {
         email,
         name,
         location,
-        avatarURL,
         githubUsername,
         password,
       }: ICreateAccountInput
@@ -34,13 +33,12 @@ export default {
             name,
             location,
             password: uglyPassword,
-            avatarURL,
             githubUsername,
           },
         })
         return { ok: true }
-      } catch (error) {
-        return { ok: false, error }
+      } catch (e) {
+        return { ok: false, error: 'Cant create account.' }
       }
     },
   },

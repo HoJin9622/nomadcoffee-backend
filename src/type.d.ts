@@ -5,7 +5,6 @@ export interface ICreateAccountInput {
   email: string
   name: string
   location: string
-  avatarURL: string
   githubUsername: string
   password: string
 }
@@ -20,6 +19,16 @@ export interface IEditProfileInput {
   name: string
   location: string
   githubUsername: string
+}
+
+export interface ISeeFollowersInput {
+  username: string
+  page: number
+}
+
+export interface ISeeFollowingInput {
+  username: string
+  lastId: number
 }
 
 type Context = {
